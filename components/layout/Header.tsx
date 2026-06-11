@@ -33,8 +33,16 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full px-4 sm:px-6 lg:px-8 pt-4">
       <div className="mx-auto max-w-7xl rounded-full border border-zinc-200/60 bg-white/90 shadow-sm backdrop-blur-md px-6 py-3 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <img src="/logo.svg" alt="Tulsi Office Solution" className="h-10 sm:h-12 w-auto transition-transform group-hover:scale-102" />
+        <Link href="/" className="flex items-center gap-3 group">
+          <img src="/logo.svg" alt="Tulsi Office Solution" className="h-10 sm:h-12 w-auto transition-transform group-hover:scale-105" />
+          <div className="hidden sm:flex flex-col justify-center leading-tight">
+            <span className="font-outfit font-black text-sm text-black tracking-tight group-hover:text-[#967e67] transition-colors">
+              T U L S I
+            </span>
+            <span className="font-outfit font-semibold text-[10px] text-zinc-400 uppercase tracking-[0.15em]">
+              Office Solution
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

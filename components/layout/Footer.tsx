@@ -7,11 +7,19 @@ export function Footer() {
   return (
     <footer className="border-t border-zinc-200 bg-[#f2efe9] py-16 text-zinc-650 mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="md:col-span-2 space-y-4">
-          <div className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Tulsi Office Solution" className="h-10 w-auto" />
+        <div className="md:col-span-2 space-y-5">
+          <div className="flex items-center gap-3">
+            <img src="/logo.svg" alt="Tulsi Office Solution" className="h-12 w-auto" />
+            <div className="flex flex-col justify-center leading-tight">
+              <span className="font-outfit font-black text-sm text-black tracking-tight group-hover:text-[#967e67] transition-colors">
+                T U L S I
+              </span>
+              <span className="font-outfit font-semibold text-[10px] text-zinc-400 uppercase tracking-[0.2em]">
+                Office Solution
+              </span>
+            </div>
           </div>
-          <p className="text-xs leading-relaxed max-w-sm">
+          <p className="text-xs leading-relaxed max-w-sm text-zinc-500">
             Premium B2B E-commerce supplier. Standardising facility management, washroom items, stationery, and printing solutions for modern corporations.
           </p>
         </div>
