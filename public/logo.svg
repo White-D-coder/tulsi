@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Brand colors -->
+    <style>
+      .brand-blue { fill: #0b3060; }
+      .brand-blue-stroke { stroke: #0b3060; fill: none; stroke-width: 8; stroke-linecap: round; }
+      .brand-green { fill: #4b8527; }
+      .brand-green-stroke { stroke: #4b8527; fill: none; stroke-width: 8; stroke-linecap: round; }
+      .brand-text-large { font-family: 'Outfit', 'Inter', sans-serif; font-weight: 900; font-size: 64px; fill: #0b3060; letter-spacing: 0.1em; }
+      .brand-text-sub { font-family: 'Outfit', 'Inter', sans-serif; font-weight: 700; font-size: 20px; fill: #4b8527; letter-spacing: 0.15em; }
+      .brand-text-tag { font-family: 'Outfit', 'Inter', sans-serif; font-weight: 700; font-size: 13px; fill: #0b3060; letter-spacing: 0.08em; }
+    </style>
+  </defs>
+
+  <!-- Crest Circular Ring -->
+  <!-- Left Blue Half -->
+  <path d="M 250 60 A 180 180 0 0 0 100 290" class="brand-blue-stroke" stroke-dasharray="none" />
+  <!-- Right Green Half -->
+  <path d="M 250 60 A 180 180 0 0 1 400 290" class="brand-green-stroke" />
+
+  <!-- Leaves at the Top -->
+  <g>
+    <!-- Center Leaf -->
+    <path d="M 250 70 C 235 45 235 20 250 5 C 265 20 265 45 250 70 Z" class="brand-green" />
+    <!-- Left Leaf -->
+    <path d="M 240 70 C 215 58 200 40 208 24 C 224 28 234 48 240 70 Z" class="brand-green" />
+    <!-- Right Leaf -->
+    <path d="M 260 70 C 285 58 300 40 292 24 C 276 28 266 48 260 70 Z" class="brand-green" />
+  </g>
+
+  <!-- Large Central T (semi-background) -->
+  <path d="M 160 120 H 340 V 155 H 285 V 290 H 215 V 155 H 160 Z" fill="#0b3060" opacity="0.9" />
+
+  <!-- Left: Skyscrapers (Office/Corporate) -->
+  <g class="brand-blue">
+    <!-- Tall building -->
+    <path d="M 145 160 H 200 V 290 H 145 Z" />
+    <!-- Angular roof building -->
+    <path d="M 120 205 L 145 190 V 290 H 120 Z" />
+    <!-- Windows for tall building -->
+    <rect x="155" y="175" width="10" height="15" fill="#ffffff" />
+    <rect x="175" y="175" width="10" height="15" fill="#ffffff" />
+    <rect x="155" y="200" width="10" height="15" fill="#ffffff" />
+    <rect x="175" y="200" width="10" height="15" fill="#ffffff" />
+    <rect x="155" y="225" width="10" height="15" fill="#ffffff" />
+    <rect x="175" y="225" width="10" height="15" fill="#ffffff" />
+    <rect x="155" y="250" width="10" height="15" fill="#ffffff" />
+    <rect x="175" y="250" width="10" height="15" fill="#ffffff" />
+
+    <!-- Windows for angular building -->
+    <rect x="128" y="215" width="8" height="12" fill="#ffffff" />
+    <rect x="128" y="235" width="8" height="12" fill="#ffffff" />
+    <rect x="128" y="255" width="8" height="12" fill="#ffffff" />
+  </g>
+
+  <!-- Center: Graduation Cap, Profile, and Open Book (Education) -->
+  <g fill="#0b3060">
+    <!-- Open Book (Ground curve) -->
+    <path d="M 100 295 Q 250 260 250 295 Q 250 260 400 295 C 370 280 310 275 250 280 C 190 275 130 280 100 295 Z" />
+    <path d="M 105 303 Q 250 268 250 303 Q 250 268 395 303 C 365 288 310 283 250 288 C 190 283 135 288 105 303 Z" opacity="0.8" />
+
+    <!-- Graduation Cap -->
+    <path d="M 215 210 L 250 195 L 285 210 L 250 225 Z" />
+    <path d="M 232 217 V 224 C 232 232 268 232 268 224 V 217" />
+    <!-- Tassel -->
+    <path d="M 285 210 V 228 L 288 232" stroke="#0b3060" stroke-width="2" fill="none" />
+    <circle cx="288" cy="233" r="2" />
+
+    <!-- Person Profile -->
+    <circle cx="250" cy="242" r="11" />
+    <path d="M 230 268 C 230 258 238 258 250 258 C 262 258 270 258 270 268 Z" />
+  </g>
+
+  <!-- Right: Factory, Chimney and Gear (Industry) -->
+  <!-- Factory & Chimney -->
+  <path d="M 285 215 L 305 195 V 290 H 285 Z" fill="#4b8527" />
+  <path d="M 305 215 L 340 185 V 290 H 305 Z" fill="#4b8527" opacity="0.9" />
+  <!-- Factory Chimney pipe -->
+  <rect x="320" y="145" width="10" height="40" fill="#4b8527" />
+  <rect x="317" y="142" width="16" height="5" fill="#4b8527" />
+
+  <!-- Gear/Cogwheel -->
+  <g fill="#4b8527">
+    <!-- Outer Gear Circle -->
+    <circle cx="345" cy="255" r="26" />
+    <!-- Inner cutout -->
+    <circle cx="345" cy="255" r="10" fill="#ffffff" />
+    <!-- Teeth -->
+    <path d="M 342 225 H 348 L 347 232 H 343 Z" />
+    <path d="M 342 278 H 348 L 347 285 H 343 Z" />
+    <path d="M 315 252 V 258 L 322 257 V 253 Z" />
+    <path d="M 368 252 V 258 L 375 257 V 253 Z" />
+    <!-- Diagonal Teeth -->
+    <path d="M 324 234 L 328 239 L 333 234 L 329 229 Z" />
+    <path d="M 361 271 L 365 276 L 370 271 L 366 266 Z" />
+    <path d="M 361 234 L 365 229 L 370 234 L 366 239 Z" />
+    <path d="M 324 271 L 328 266 L 333 271 L 329 276 Z" />
+  </g>
+
+  <!-- Large Brand Label -->
+  <text x="250" y="380" text-anchor="middle" class="brand-text-large">TULSI</text>
+
+  <!-- Sub-bar (OFFICE SOLUTION) -->
+  <line x1="80" y1="410" x2="180" y2="410" stroke="#0b3060" stroke-width="3" />
+  <text x="250" y="416" text-anchor="middle" class="brand-text-sub">OFFICE SOLUTION</text>
+  <line x1="320" y1="410" x2="420" y2="410" stroke="#0b3060" stroke-width="3" />
+
+  <!-- Sub-Tags with circles -->
+  <g>
+    <!-- Office icon & text -->
+    <circle cx="95" cy="455" r="15" fill="#0b3060" />
+    <!-- simple chair silhouette inside circle -->
+    <path d="M 91 448 H 99 V 455 H 91 Z M 91 457 H 99 L 100 463 H 90 Z" fill="#ffffff" />
+    <text x="118" y="460" class="brand-text-tag" font-weight="bold">OFFICE</text>
+
+    <line x1="180" y1="445" x2="180" y2="465" stroke="#cccccc" stroke-width="1.5" />
+
+    <!-- Education icon & text -->
+    <circle cx="215" cy="455" r="15" fill="#4b8527" />
+    <!-- simple cap silhouette inside circle -->
+    <path d="M 205 455 L 215 450 L 225 455 L 215 460 Z" fill="#ffffff" />
+    <text x="238" y="460" class="brand-text-tag" font-weight="bold">EDUCATION</text>
+
+    <line x1="330" y1="445" x2="330" y2="465" stroke="#cccccc" stroke-width="1.5" />
+
+    <!-- Industry icon & text -->
+    <circle cx="365" cy="455" r="15" fill="#0b3060" />
+    <!-- simple factory silhouette inside circle -->
+    <path d="M 358 462 V 452 L 365 456 V 452 L 372 456 V 462 Z" fill="#ffffff" />
+    <text x="388" y="460" class="brand-text-tag" font-weight="bold">INDUSTRY</text>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  sku           String      @id @map("_id")
+  name          String
+  description   String?
+  category      Category
+  subcategory   String?
+  brand         String?
+  unit          Unit        @default(PIECE)
+  moq           Int         @default(1)
+  price         Float?
+  discountPrice Float?
+  inStock       Boolean     @default(true)
+  stockQuantity Int         @default(0)
+  images        Json        // [{ url: string, alt: string, isPrimary: boolean }]
+  documents     Json?       // spec sheets
+  weight        Float?
+  dimensions    Json?       // { length, width, height, unit: "cm" }
+  tags          String[]
+  metaTitle     String?
+  metaDesc      String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  quotes        Quote[]
+  orderItems    OrderItem[]
+
+  @@index([category])
+  @@index([inStock])
+}
+
+model Quote {
+  id             String      @id @default(cuid()) @map("_id")
+  productSKU     String
+  product        Product     @relation(fields: [productSKU], references: [sku])
+  quantity       Int
+  customerName   String
+  customerEmail  String
+  customerPhone  String
+  message        String?
+  status         QuoteStatus @default(PENDING)
+  adminNotes     String?
+  whatsappMsgId  String?     // ID from WhatsApp API
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Order {
+  id              String        @id @default(cuid()) @map("_id")
+  orderNumber     String        @unique
+  quoteId         String?       @unique
+  customerName    String
+  customerEmail   String
+  customerPhone   String
+  shippingAddress Json
+  totalAmount     Float
+  status          OrderStatus   @default(PENDING)
+  paymentStatus   PaymentStatus @default(UNPAID)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  items OrderItem[]
+}
+
+model OrderItem {
+  id         String   @id @default(cuid()) @map("_id")
+  orderId    String
+  order      Order    @relation(fields: [orderId], references: [id])
+  productSKU String
+  product    Product  @relation(fields: [productSKU], references: [sku])
+  quantity   Int
+  unitPrice  Float
+
+  @@unique([orderId, productSKU])
+}
+
+enum Category {
+  ST   // Stationery
+  HK   // Housekeeping
+  PR   // Printing
+  WF   // Washroom
+  MS   // Machines
+}
+
+enum Unit {
+  PIECE
+  BOX
+  PACK
+  ROLL
+  SET
+}
+
+enum QuoteStatus {
+  PENDING
+  CONTACTED
+  QUOTED
+  ORDERED
+  EXPIRED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  REFUNDED
+}
