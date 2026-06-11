@@ -36,10 +36,10 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <img src="/logo.svg" alt="Tulsi Office Solution" className="h-10 sm:h-12 w-auto transition-transform group-hover:scale-105" />
           <div className="hidden sm:flex flex-col justify-center leading-tight">
-            <span className="font-outfit font-black text-sm text-black tracking-tight group-hover:text-[#967e67] transition-colors">
+            <span className="font-serif text-sm font-semibold text-black tracking-[0.25em] group-hover:text-[#967e67] transition-colors">
               T U L S I
             </span>
-            <span className="font-outfit font-semibold text-[10px] text-zinc-400 uppercase tracking-[0.15em]">
+            <span className="font-outfit font-semibold text-[9px] text-zinc-400 uppercase tracking-[0.2em] mt-0.5">
               Office Solution
             </span>
           </div>
